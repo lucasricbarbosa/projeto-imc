@@ -25,9 +25,10 @@ body {
   font-size: 1.6rem;
 }
 
-input, button {
-    font-size: 1.6rem;
-    line-height: 2rem;
+input,
+button {
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 .container {
@@ -52,8 +53,8 @@ input, button {
 }
 
 form {
-    max-width: 30rem;
-    width: 30rem;
+  max-width: 30rem;
+  width: 30rem;
 }
 
 form h1 {
@@ -79,71 +80,96 @@ form input {
 }
 
 form input:focus {
-    outline: 2px solid var(--button-color);
+  outline: 2px solid var(--button-color);
 }
 
 form input::placeholder {
-    color: var(--input-not-selected-color);
+  color: var(--input-not-selected-color);
 }
 
 .input-wrapper + .input-wrapper {
-    margin-top: 1.6rem;
+  margin-top: 1.6rem;
 }
 
 form button {
-    margin-top: 3.2rem;
-    padding: 1.6rem;
-    width: 100%;
-    border: none;
-    background-color: var(--button-color);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.8rem;
-    font-weight: bold;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    transition: background ease-in-out 0.2s;
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+  border: none;
+  background-color: var(--button-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background ease-in-out 0.2s;
 }
 
 form button:hover {
-    background-color: var(--button-hover-color);
+  background-color: var(--button-hover-color);
 }
 
 /* Modal =-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=*/
 .modal-wrapper.open {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal-wrapper {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.70);
-    
-    display: grid;
-    place-content: center;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
 
-    opacity: 0;
-    visibility: hidden;
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
 }
 
 .modal {
-    position: relative;
+  position: relative;
 }
 
 .modal button {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 
-    position: absolute;
-    top: 1.6rem;
-    right: 1.6rem;
-    cursor: pointer;
-    transition: transform ease-in-out 0.2s;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  cursor: pointer;
+  transition: transform ease-in-out 0.2s;
 }
 
 .modal button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/* Alert error =-=--=-=-=-=-=-=-=-=-==-=-=*/
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-error {
+  position: absolute;
+  background-color: var(--error-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0.8rem 0;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2rem;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: transform 0.5s;
 }
